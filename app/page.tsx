@@ -8,36 +8,27 @@ import {
   Clock,
   TrendingUp,
   Globe,
-  Calculator,
   FileSpreadsheet,
   Briefcase,
   Users,
   Phone,
   Database,
   BarChart3,
+  Headphones,
+  Heart,
+  ChevronLeft,
+  ChevronRight,
+  Quote,
 } from "lucide-react"
 
 export default function LandingPage() {
   const services = [
-    {
-      name: "Unterstützung bei täglichen Aufgaben",
-      icon: <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
-    { name: "Buchhaltung mit SevDesk", icon: <Calculator className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    {
-      name: "Telefonische Kundenqualifizierung",
-      icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
     { name: "Mailvertrieb", icon: <BarChart3 className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     {
       name: "Projektorganisation & Prozessautomatisierung",
       icon: <Briefcase className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
     },
     { name: "Webseiten & SEO", icon: <Globe className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    {
-      name: "Vorbereitende Buchhaltung & UmStVA",
-      icon: <Calculator className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
     {
       name: "Komplexe Excelberechnungen",
       icon: <FileSpreadsheet className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
@@ -46,6 +37,8 @@ export default function LandingPage() {
     { name: "Vertrieb & CRM Pflege", icon: <Users className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Kundenqualifizierung", icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Dateneingabe", icon: <Database className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
+    { name: "Kundensupport", icon: <Headphones className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
+    { name: "Customer Success", icon: <Heart className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
   ]
 
   const software = [
@@ -62,16 +55,6 @@ export default function LandingPage() {
     {
       name: "Asana",
       logo: "/images/logos/asana-logo-new.png",
-      hasBackground: false,
-    },
-    {
-      name: "SevDesk",
-      logo: "/images/logos/sevdesk-logo.jpeg",
-      hasBackground: false,
-    },
-    {
-      name: "DATEV",
-      logo: "/images/logos/datev-logo.png",
       hasBackground: false,
     },
     {
@@ -94,25 +77,30 @@ export default function LandingPage() {
       logo: "/images/logos/wordpress-logo.png",
       hasBackground: false,
     },
+    {
+      name: "Redaxo",
+      logo: "/images/logos/redaxo-logo.jpg",
+      hasBackground: false,
+    },
   ]
 
   const languages = [
-    { lang: "Deutsch", level: "Muttersprache" },
-    { lang: "Englisch", level: "Fließend" },
-    { lang: "Portugiesisch", level: "Fließend" },
-    { lang: "Spanisch", level: "Grundkenntnisse" },
+    { lang: "Deutsch", level: "Muttersprache", flag: "/images/flags/germany.jpg" },
+    { lang: "Englisch", level: "Fließend", flag: "/images/flags/uk.jpg" },
+    { lang: "Portugiesisch", level: "Fließend", flag: "/images/flags/brazil.jpg" },
+    { lang: "Spanisch", level: "Grundkenntnisse", flag: "/images/flags/spain.jpg" },
   ]
 
   const prices = [
     {
       title: "Einzelstunde",
-      price: "40,00€",
+      price: "20,00€",
       description: "Flexible Unterstützung nach Bedarf",
       features: ["Keine Mindestlaufzeit", "Abrechnung nach tatsächlichem Aufwand", "Ideal für kleinere Projekte"],
     },
     {
       title: "Paketpreis 10h",
-      price: "300,00€ brutto",
+      price: "150,00€",
       description: "Günstiger Paketpreis für regelmäßige Unterstützung",
       features: [
         "25% Rabatt gegenüber Einzelstunden",
@@ -137,17 +125,30 @@ export default function LandingPage() {
     {
       name: "Punktgenau",
       logo: "/images/punktgenau-logo.png",
-      description: "Kundenansprache & Vertrieb",
+      description: "Kundenansprache; Customer Success; Vertrieb im Bereich Engineering & Software",
     },
     {
       name: "Amicia",
       logo: "/images/amicia-logo.svg",
       description: "SEO, Webseiten und GoogleAds",
     },
+  ]
+
+  const testimonials = [
     {
-      name: "Technik ohne Grenzen",
-      logo: "/images/teog-logo.png",
-      description: "Projektleiter & Repräsentant in Brasilien",
+      quote: "Lutz hat unser Back-Office komplett transformiert. Professionell, zuverlässig und immer erreichbar!",
+      author: "Kundenname",
+      company: "Unternehmen",
+    },
+    {
+      quote: "Die Zusammenarbeit mit Lutz ist unkompliziert und effizient. Sehr zu empfehlen!",
+      author: "Kundenname",
+      company: "Unternehmen",
+    },
+    {
+      quote: "Hervorragendes Preis-Leistungs-Verhältnis und deutsche Gründlichkeit trotz Standort in Brasilien.",
+      author: "Kundenname",
+      company: "Unternehmen",
     },
   ]
 
@@ -166,7 +167,7 @@ export default function LandingPage() {
       <section
         className="py-20 px-4 relative min-h-[600px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/images/florianopolis-bridge.jpg')`,
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/images/florianopolis-bridge.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -186,16 +187,16 @@ export default function LandingPage() {
                   />
                 </div>
               </div>
-              <h3 className="text-2xl font-semibold text-white mt-6">Lutz Michaelis</h3>
-              <p className="text-gray-200 text-center mt-2">Ihr virtueller Assistent</p>
+              <h3 className="text-2xl font-semibold text-gray-800 mt-6">Lutz Michaelis</h3>
+              <p className="text-gray-700 text-center mt-2">Ihr virtueller Assistent</p>
             </div>
 
             {/* Content Section */}
             <div className="lg:w-2/3 text-center lg:text-left">
-              <h1 className="text-5xl font-bold text-white mb-6">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6 drop-shadow-sm">
                 Dein Back Office Experte aus Florianópolis, Brasilien
               </h1>
-              <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+              <p className="text-xl text-gray-800 mb-8 leading-relaxed drop-shadow-sm">
                 Ich bin Lutz, ein virtueller Assistent mit langjähriger Erfahrung – ansässig in Florianópolis, einer der
                 modernsten und lebenswertesten Städte Brasiliens. Ich biete Selbstständigen und Unternehmer:innen in
                 Deutschland ein hervorragendes Preis-Leistungs-Verhältnis für professionelle Unterstützung im Back
@@ -271,6 +272,13 @@ export default function LandingPage() {
             {languages.map((item, index) => (
               <Card key={index} className="text-center border-gray-200 hover:border-green-200 transition-colors">
                 <CardContent className="p-6">
+                  <div className="mb-4 flex justify-center">
+                    <img
+                      src={item.flag}
+                      alt={`${item.lang} Flagge`}
+                      className="w-16 h-12 object-cover rounded shadow-sm"
+                    />
+                  </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.lang}</h3>
                   <Badge variant="secondary" className="text-sm bg-green-100 text-green-800 hover:bg-green-200">
                     {item.level}
@@ -353,7 +361,7 @@ export default function LandingPage() {
           {/* Client Logos Carousel */}
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">Vertrauen von Unternehmen</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
@@ -372,12 +380,37 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Das sagen meine Kunden</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-8">
+                  <Quote className="h-10 w-10 text-green-600 mb-4 opacity-50" />
+                  <p className="text-gray-700 mb-6 italic leading-relaxed">{`"${testimonial.quote}"`}</p>
+                  <div className="border-t pt-4">
+                    <p className="font-semibold text-gray-900">{testimonial.author}</p>
+                    <p className="text-sm text-gray-500">{testimonial.company}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 mt-8 text-sm italic">
+            Platzhalter - Hier könnten echte Kundenzitate stehen
+          </p>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Bereit für professionelle Unterstützung?</h2>
           <p className="text-xl mb-8 opacity-90">
-            Lassen Sie uns gemeinsam Ihr Back Office optimieren und Ihre Produktivität steigern.
+            Lassen Sie uns in einem unverbindlichen Kennenlerngespräch besprechen, wie ich Sie im Back Office
+            unterstützen und entlasten kann.
           </p>
           <Button
             size="lg"
