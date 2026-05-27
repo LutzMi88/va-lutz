@@ -324,9 +324,13 @@ export default function LandingPage() {
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    {(index === 0 || index === 1) ? (
+                    {(index === 0 || index === 1 || index === 3) ? (
                       <a 
-                        href={index === 0 ? "https://www.stoll-photobox.de/" : "https://dauerkunden.de/"} 
+                        href={
+                          index === 0 ? "https://www.stoll-photobox.de/" : 
+                          index === 1 ? "https://dauerkunden.de/" : 
+                          "https://www.teog.ngo/"
+                        } 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
