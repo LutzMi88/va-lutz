@@ -366,6 +366,7 @@ export default function LandingPage() {
               {
                 name: "Maria Schmidt",
                 text: "Lutz hat mein Back Office komplett revolutioniert. Professionell, zuverlässig und immer erreichbar. Eine Bereicherung für mein Unternehmen!",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-qq2Kc3U9yqjpaD7GwFqnqXdv9en54g.png",
               },
               {
                 name: "Thomas Weber",
@@ -382,9 +383,9 @@ export default function LandingPage() {
             ].map((testimonial, index) => (
               <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center mb-4 flex-shrink-0">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center mb-4 flex-shrink-0 overflow-hidden">
                     <img
-                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${index}`}
+                      src={testimonial.image || `https://api.dicebear.com/7.x/avataaars/svg?seed=${index}`}
                       alt={testimonial.name}
                       className="w-20 h-20 rounded-full object-cover"
                     />
