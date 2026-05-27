@@ -8,35 +8,21 @@ import {
   Clock,
   TrendingUp,
   Globe,
-  Calculator,
-  FileSpreadsheet,
   Briefcase,
   Users,
   Phone,
-  Database,
-  BarChart3,
 } from "lucide-react"
 
 export default function LandingPage() {
   const services = [
     {
-      name: "Telefonische Kundenqualifizierung",
-      icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
-    { name: "Mailvertrieb", icon: <BarChart3 className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    {
       name: "Projektorganisation & Prozessautomatisierung",
       icon: <Briefcase className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
     },
-    { name: "Webseiten & SEO", icon: <Globe className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    {
-      name: "Komplexe Excelberechnungen",
-      icon: <FileSpreadsheet className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
+    { name: "Webseiten, SEO & AIO", icon: <Globe className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Unterstützung im Back-Office", icon: <Briefcase className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Vertrieb & CRM Pflege", icon: <Users className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Kundenqualifizierung & Aftersales", icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    { name: "Dateneingabe", icon: <Database className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
   ]
 
   const software = [
