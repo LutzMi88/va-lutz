@@ -121,6 +121,11 @@ export default function LandingPage() {
       logo: "/images/dauerkunden-logo.png",
       description: "Kundenansprache & Vertrieb",
     },
+    {
+      name: "Sinaxys AG",
+      logo: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-oIkMKcBDWi5jRgrtxtjimlv9qxohqN.png",
+      description: "Digitale Lösungen & IT-Services",
+    },
   ]
 
   return (
@@ -325,17 +330,18 @@ export default function LandingPage() {
           {/* Client Logos Carousel */}
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">Referenzen</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8">
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    {(index === 0 || index === 1 || index === 3 || index === 4) ? (
+                    {(index === 0 || index === 1 || index === 3 || index === 4 || index === 5) ? (
                       <a 
                         href={
                           index === 0 ? "https://www.stoll-photobox.de/" : 
                           index === 1 ? "https://dauerkunden.de/" : 
                           index === 3 ? "https://www.teog.ngo/" :
-                          "https://dauerkunden.de/"
+                          index === 4 ? "https://dauerkunden.de/" :
+                          "https://sinaxys.com/"
                         } 
                         target="_blank" 
                         rel="noopener noreferrer"
