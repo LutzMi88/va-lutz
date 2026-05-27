@@ -42,16 +42,6 @@ export default function LandingPage() {
       hasBackground: false,
     },
     {
-      name: "SevDesk",
-      logo: "/images/logos/sevdesk-logo.jpeg",
-      hasBackground: false,
-    },
-    {
-      name: "DATEV",
-      logo: "/images/logos/datev-logo.png",
-      hasBackground: false,
-    },
-    {
       name: "HubSpot",
       logo: "/images/logos/hubspot-logo.svg",
       hasBackground: false,
@@ -199,9 +189,9 @@ export default function LandingPage() {
       <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meine Leistungen</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {services.map((service, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow border-gray-200 hover:border-green-200">
+              <Card key={index} className="hover:shadow-lg transition-shadow border-gray-200 hover:border-green-200 w-full max-w-sm">
                 <CardContent className="p-6">
                   <div className="flex items-start space-x-3">
                     {service.icon}
@@ -218,11 +208,11 @@ export default function LandingPage() {
       <section className="py-16 px-4 bg-green-50">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Softwarekenntnisse</h2>
-          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6 justify-items-center">
             {software.map((item, index) => (
               <Card
                 key={index}
-                className="text-center border-gray-200 hover:shadow-lg transition-shadow group hover:border-green-200"
+                className="text-center border-gray-200 hover:shadow-lg transition-shadow group hover:border-green-200 w-full max-w-sm"
               >
                 <CardContent className="p-6 flex flex-col items-center">
                   <div className="mb-4 h-20 w-20 flex items-center justify-center">
