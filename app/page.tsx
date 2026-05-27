@@ -116,6 +116,11 @@ export default function LandingPage() {
       logo: "/images/teog-logo.png",
       description: "Projektleiter & Repräsentant in Brasilien",
     },
+    {
+      name: "Dauerkunden",
+      logo: "/images/dauerkunden-logo.png",
+      description: "Kundenansprache & Vertrieb",
+    },
   ]
 
   return (
@@ -320,16 +325,17 @@ export default function LandingPage() {
           {/* Client Logos Carousel */}
           <div className="text-center">
             <h3 className="text-2xl font-semibold text-gray-900 mb-8">Referenzen</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    {(index === 0 || index === 1 || index === 3) ? (
+                    {(index === 0 || index === 1 || index === 3 || index === 4) ? (
                       <a 
                         href={
                           index === 0 ? "https://www.stoll-photobox.de/" : 
                           index === 1 ? "https://dauerkunden.de/" : 
-                          "https://www.teog.ngo/"
+                          index === 3 ? "https://www.teog.ngo/" :
+                          "https://dauerkunden.de/"
                         } 
                         target="_blank" 
                         rel="noopener noreferrer"
@@ -371,14 +377,17 @@ export default function LandingPage() {
               {
                 name: "Thomas Weber",
                 text: "Die Zusammenarbeit mit Lutz ist unkompliziert und sehr effizient. Er versteht meine Anforderungen perfekt und setzt diese schnell um.",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-noPzJJk6AwzYQK2tIhzGsVGsQ8yQbI.png",
               },
               {
                 name: "Lisa Müller",
                 text: "Endlich habe ich jemanden, auf den ich mich verlassen kann! Lutz kümmert sich um alle Details und gibt mir dadurch Zeit für wichtige Dinge.",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-iAk3CVn0dcydm5XwmoOr7U0oAfoPyW.png",
               },
               {
                 name: "Michael Fischer",
                 text: "Das Preis-Leistungs-Verhältnis ist unschlagbar. Lutz bietet hochwertige Dienstleistungen zu fairen Preisen. Sehr zu empfehlen!",
+                image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-QybokkA7tb08VLnLCCTAKiPPwl4vDh.png",
               },
             ].map((testimonial, index) => (
               <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
