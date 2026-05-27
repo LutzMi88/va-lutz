@@ -260,8 +260,8 @@ export default function LandingPage() {
                 className="border-gray-200 hover:shadow-lg transition-shadow h-full hover:border-green-200"
               >
                 <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{plan.title}</h3>
-                  <div className="text-lg font-bold text-green-600 mb-4">{plan.price}</div>
+                  <h3 className="text-base font-bold text-gray-900 mb-2 leading-6">{plan.title}</h3>
+                  <div className="text-base font-bold text-green-600 mb-4 leading-5">{plan.price}</div>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {plan.features.map((feature, i) => (
@@ -272,15 +272,15 @@ export default function LandingPage() {
                     ))}
                   </ul>
                   {index === 2 && (
-                    <Button
-                      className="mt-auto w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-7 py-2"
-                      asChild
+                    <a
+                      href="https://calendly.com/va-lutz"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto w-full inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-xs ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-8 py-2 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold"
                     >
-                      <a href="https://calendly.com/va-lutz" target="_blank" rel="noopener noreferrer">
-                        <Calendar className="h-4 w-4 mr-2" />
-                        Termin vereinbaren
-                      </a>
-                    </Button>
+                      <Calendar className="h-4 w-4" />
+                      Termin vereinbaren
+                    </a>
                   )}
                 </CardContent>
               </Card>
@@ -324,8 +324,12 @@ export default function LandingPage() {
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    {index === 0 ? (
-                      <a href="https://www.stoll-photobox.de/" target="_blank" rel="noopener noreferrer">
+                    {(index === 0 || index === 1) ? (
+                      <a 
+                        href={index === 0 ? "https://www.stoll-photobox.de/" : "https://dauerkunden.de/"} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
                         <img
                           src={client.logo || "/placeholder.svg"}
                           alt={`${client.name} Logo`}
