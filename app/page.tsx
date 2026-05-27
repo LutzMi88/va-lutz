@@ -73,13 +73,13 @@ export default function LandingPage() {
   const prices = [
     {
       title: "Einzelstunde",
-      price: "40,00€",
+      price: "20,00€",
       description: "Flexible Unterstützung nach Bedarf",
       features: ["Keine Mindestlaufzeit", "Abrechnung nach tatsächlichem Aufwand", "Ideal für kleinere Projekte"],
     },
     {
       title: "Paketpreis 10h",
-      price: "300,00€ brutto",
+      price: "180,00€",
       description: "Günstiger Paketpreis für regelmäßige Unterstützung",
       features: [
         "25% Rabatt gegenüber Einzelstunden",
@@ -260,8 +260,8 @@ export default function LandingPage() {
                 className="border-gray-200 hover:shadow-lg transition-shadow h-full hover:border-green-200"
               >
                 <CardContent className="p-6 flex flex-col h-full">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
-                  <div className="text-3xl font-bold text-green-600 mb-4">{plan.price}</div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{plan.title}</h3>
+                  <div className="text-lg font-bold text-green-600 mb-4">{plan.price}</div>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   <ul className="space-y-2 mb-6 flex-grow">
                     {plan.features.map((feature, i) => (
@@ -273,7 +273,7 @@ export default function LandingPage() {
                   </ul>
                   {index === 2 && (
                     <Button
-                      className="mt-auto w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold"
+                      className="mt-auto w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold text-xs px-7 py-2"
                       asChild
                     >
                       <a href="https://calendly.com/va-lutz" target="_blank" rel="noopener noreferrer">
@@ -324,11 +324,21 @@ export default function LandingPage() {
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
                   <div className="bg-white rounded-lg p-6 shadow-md mb-4 w-full h-32 flex items-center justify-center hover:shadow-lg transition-shadow">
-                    <img
-                      src={client.logo || "/placeholder.svg"}
-                      alt={`${client.name} Logo`}
-                      className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                    />
+                    {index === 0 ? (
+                      <a href="https://www.stoll-photobox.de/" target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={client.logo || "/placeholder.svg"}
+                          alt={`${client.name} Logo`}
+                          className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                        />
+                      </a>
+                    ) : (
+                      <img
+                        src={client.logo || "/placeholder.svg"}
+                        alt={`${client.name} Logo`}
+                        className="max-h-20 max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                      />
+                    )}
                   </div>
                   <h4 className="font-semibold text-gray-900 mb-2">{client.name}</h4>
                   <p className="text-sm text-gray-600 text-center">{client.description}</p>
