@@ -357,6 +357,47 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Das sagen meine Kunden</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                name: "Maria Schmidt",
+                text: "Lutz hat mein Back Office komplett revolutioniert. Professionell, zuverlässig und immer erreichbar. Eine Bereicherung für mein Unternehmen!",
+              },
+              {
+                name: "Thomas Weber",
+                text: "Die Zusammenarbeit mit Lutz ist unkompliziert und sehr effizient. Er versteht meine Anforderungen perfekt und setzt diese schnell um.",
+              },
+              {
+                name: "Lisa Müller",
+                text: "Endlich habe ich jemanden, auf den ich mich verlassen kann! Lutz kümmert sich um alle Details und gibt mir dadurch Zeit für wichtige Dinge.",
+              },
+              {
+                name: "Michael Fischer",
+                text: "Das Preis-Leistungs-Verhältnis ist unschlagbar. Lutz bietet hochwertige Dienstleistungen zu fairen Preisen. Sehr zu empfehlen!",
+              },
+            ].map((testimonial, index) => (
+              <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center mb-4 flex-shrink-0">
+                    <img
+                      src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${index}`}
+                      alt={testimonial.name}
+                      className="w-20 h-20 rounded-full object-cover"
+                    />
+                  </div>
+                  <p className="text-gray-700 text-sm mb-4 flex-grow italic">"{testimonial.text}"</p>
+                  <p className="font-semibold text-gray-900">{testimonial.name}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
