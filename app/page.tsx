@@ -319,7 +319,7 @@ export default function LandingPage() {
 
           {/* Client Logos Carousel */}
           <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-8">Vertrauen von Unternehmen</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-8">Referenzen</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {clients.map((client, index) => (
                 <div key={index} className="flex flex-col items-center">
