@@ -20,11 +20,6 @@ import {
 export default function LandingPage() {
   const services = [
     {
-      name: "Unterstützung bei täglichen Aufgaben",
-      icon: <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
-    { name: "Buchhaltung mit SevDesk", icon: <Calculator className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    {
       name: "Telefonische Kundenqualifizierung",
       icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
     },
@@ -35,16 +30,12 @@ export default function LandingPage() {
     },
     { name: "Webseiten & SEO", icon: <Globe className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     {
-      name: "Vorbereitende Buchhaltung & UmStVA",
-      icon: <Calculator className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
-    },
-    {
       name: "Komplexe Excelberechnungen",
       icon: <FileSpreadsheet className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />,
     },
     { name: "Unterstützung im Back-Office", icon: <Briefcase className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Vertrieb & CRM Pflege", icon: <Users className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
-    { name: "Kundenqualifizierung", icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
+    { name: "Kundenqualifizierung & Aftersales", icon: <Phone className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
     { name: "Dateneingabe", icon: <Database className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" /> },
   ]
 
