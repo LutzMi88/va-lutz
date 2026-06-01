@@ -391,7 +391,7 @@ export default function LandingPage() {
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-iAk3CVn0dcydm5XwmoOr7U0oAfoPyW.png",
               },
               {
-                name: "Michael Fischer",
+                name: "Beatrice Postleb - CEO",
                 text: "Das Preis-Leistungs-Verhältnis ist unschlagbar. Lutz bietet hochwertige Dienstleistungen zu fairen Preisen. Sehr zu empfehlen!",
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-QybokkA7tb08VLnLCCTAKiPPwl4vDh.png",
               },
