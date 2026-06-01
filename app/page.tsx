@@ -386,7 +386,7 @@ export default function LandingPage() {
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-noPzJJk6AwzYQK2tIhzGsVGsQ8yQbI.png",
               },
               {
-                name: "Lisa Müller",
+                name: "André Desor - CEO Amicia",
                 text: "Endlich habe ich jemanden, auf den ich mich verlassen kann! Lutz kümmert sich um alle Details und gibt mir dadurch Zeit für wichtige Dinge.",
                 image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/grafik-iAk3CVn0dcydm5XwmoOr7U0oAfoPyW.png",
               },
